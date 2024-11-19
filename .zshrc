@@ -1,17 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 #
-export PYTHONPATH=$HOME/opt/auto-stable/autopy
-#
 # for exe to load .so libs
-export LD_LIBRARY_PATH=/opt/lib:$HOME/opt/auto-stable/lib
+# export LD_LIBRARY_PATH=/opt/lib
 # additional include paths for C++ header files
-export CPLUS_INCLUDE_PATH=/opt/include:$HOME/opt/auto-stable
+# export CPLUS_INCLUDE_PATH=/opt/include
 # additional link paths for .a and .so libs
-export LIBRARY_PATH=/opt/lib:$HOME/opt/auto-stable/lib
-
-export QHOME=$HOME/3rd/q
+# export LIBRARY_PATH=/opt/lib
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$QHOME/l64:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -20,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="ys-cx"
+ZSH_THEME="ys"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -84,12 +79,11 @@ ZSH_THEME="ys-cx"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     z
-	git
-	colored-man-pages
-	command-not-found
-    zsh-z
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+    git
+    colored-man-pages
+    command-not-found
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -119,19 +113,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/cx/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/cx/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/cx/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/cx/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
